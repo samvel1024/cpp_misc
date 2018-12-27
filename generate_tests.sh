@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+if test -z "$1"
+then
+      echo "Test dir not specified"
+      exit 1
+fi
+
+mkdir -p tests
+for i in $(seq 1 20); do
+   file="./$1/t$i.in"
+   echo "$1 $2" | ./cmake-build-debug/testgen > ${file}
+   cat "$file" | ./cmake-build-debug/naive > "./$1/t$i.out"
+done;
+
+
