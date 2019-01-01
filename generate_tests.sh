@@ -7,10 +7,16 @@ then
       exit 1
 fi
 
+if test -z "$2"
+then
+      echo "Input for generator not specified"
+      exit 1
+fi
+
 mkdir -p tests
 for i in $(seq 1 20); do
    file="./$1/t$i.in"
-   echo "$1 $2" | ./cmake-build-debug/testgen > ${file}
+   echo "$2" | ./cmake-build-debug/testgen > ${file}
    cat "$file" | ./cmake-build-debug/naive > "./$1/t$i.out"
 done;
 
