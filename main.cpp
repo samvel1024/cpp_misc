@@ -20,6 +20,8 @@ const bool debug = false;
 #define logc(container)
 #endif
 
+#define ll long long
+
 int main() {
     return 0;
 }
