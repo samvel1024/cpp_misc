@@ -1,5 +1,10 @@
-.idea
-cmake-build-debug
-std.in
-temp
+*
+!.gitignore
 
+!CMakeLists.txt
+!*.sh
+!*.c
+!*.cc
+!*.cpp
+!*.h
+!std.in
