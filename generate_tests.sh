@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+cd cmake-build-debug; make -j8; cd ..;
+
 if test -z "$1"
 then
       echo "Test dir not specified"
