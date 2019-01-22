@@ -9,7 +9,7 @@ const bool debug = true;
 #define logc(container) cout << #container << "={ ";    for(auto i : container) cout << i << " ";  ; cout << "}" << endl;
 
 void *__init() {
-    return freopen("../std.in", "r", stdin);
+  return freopen("../std.in", "r", stdin);
 }
 
 void *___p_t_r = __init();
@@ -23,7 +23,8 @@ const bool debug = false;
 #define ll long long
 
 int main() {
-    return 0;
+  
+  return 0;
 }
 
 
