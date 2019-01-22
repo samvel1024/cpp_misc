@@ -8,11 +8,11 @@ const bool debug = true;
 #define log(x) cout << #x << "=" << x << endl;
 #define logc(container) cout << #container << "={ ";    for(auto i : container) cout << i << " ";  ; cout << "}" << endl;
 
-void *init() {
+void *__init() {
     return freopen("../std.in", "r", stdin);
 }
 
-void *___p_t_r = init();
+void *___p_t_r = __init();
 #else
 const bool debug = false;
 #define ifd(x)
